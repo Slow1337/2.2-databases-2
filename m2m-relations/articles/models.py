@@ -29,8 +29,8 @@ class Tag(models.Model):
 
 class Scope(models.Model):
 
-    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='scopes')
-    tag = models.ForeignKey(Tag, on_delete=models.CASCADE, related_name='scopes')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='scope')
+    tag = models.ForeignKey(Tag, on_delete=models.CASCADE, related_name='scope')
     is_main = models.BooleanField()
 
     class Meta:
